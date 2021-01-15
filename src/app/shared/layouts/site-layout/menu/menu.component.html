@@ -1,0 +1,26 @@
+<ul class="menu">
+  <li class="menu__item"
+      *ngFor="let item of menu"
+      (click)="showChildren($event, item)"
+      [class.active]="item.active"
+  >
+    <div class="menu__link">
+      <span class="menu__icon">
+        <svg-icon-sprite
+          [src]="'assets/sprites/sprite.svg#'+item.icon"
+          style="color: #3f51b5"
+        ></svg-icon-sprite>
+      </span>
+
+      {{ item.title }}
+
+      <span class="menu__arrow" *ngIf="item.children">
+        <img src="/assets/icons/arrow-down.svg">
+      </span>
+    </div>
+
+    <ng-container *ngIf="item.children">
+      <app-menu [menu]="item.children"></app-menu>
+    </ng-container>
+  </li>
+</ul>

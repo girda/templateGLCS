@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="header__in">
+    <div class="header__logo">LOGO</div>
+
+
+    <div class="header__user-block">
+
+      <form>
+        <mat-form-field>
+          <mat-label>Search</mat-label>
+          <input matInput placeholder="Search" type="search">
+        </mat-form-field>
+      </form>
+
+      <app-profile></app-profile>
+    </div>
+  </div>
+</header>
+
+<div class="sidebar">
+  <app-menu [menu]="menu"></app-menu>
+</div>

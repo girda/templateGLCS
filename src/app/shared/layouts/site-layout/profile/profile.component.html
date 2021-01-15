@@ -1,0 +1,23 @@
+<div class="profile">
+  <button mat-button [matMenuTriggerFor]="animals">
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#profile'"
+      [width]="'30px'"
+      style="color: azure"
+      class="icon"
+    ></svg-icon-sprite>
+  </button>
+
+  <mat-menu #animals="matMenu">
+    <button mat-menu-item>profile item 1</button>
+    <button mat-menu-item>profile item 2</button>
+    <button mat-menu-item [matMenuTriggerFor]="themes">Themes</button>
+  </mat-menu>
+
+  <mat-menu #themes="matMenu">
+    <button mat-menu-item (click)="themeService.changeTheme($event, 'dark')">dark</button>
+    <button mat-menu-item (click)="themeService.changeTheme($event, 'light')">light</button>
+  </mat-menu>
+</div>
+
+

@@ -1,0 +1,25 @@
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+}
+
+.mat-button {
+  min-width: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+//button[mat-menu-item] {
+//  padding: 0 32px;
+//
+//  &::after {
+//    border-width: 5px 5px 5px 0;
+//    border-color: transparent currentColor transparent transparent;
+//    right: 0;
+//    left: 16px;
+//  }
+//}

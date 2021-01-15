@@ -1,0 +1,21 @@
+.sidebar {
+  width: 250px;
+  height: calc(100vh - 60px);
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label, ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: white;
+  }
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: white;
+  }
+  ::ng-deep .mat-form-field-placeholder, ::ng-deep .mat-focused .mat-form-field-placeholder {
+    color: white;
+  }
+  .mat-input-element {
+    color: white;
+  }
+}
+
