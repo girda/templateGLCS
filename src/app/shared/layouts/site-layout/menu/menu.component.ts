@@ -17,6 +17,11 @@ export class MenuComponent implements OnInit {
 
   showChildren(event, item): void {
     event.stopPropagation();
+    this.menu.forEach(el => {
+      if (el !== item) {
+        el.active = false;
+      }
+    });
     item.active = !item.active;
   }
 

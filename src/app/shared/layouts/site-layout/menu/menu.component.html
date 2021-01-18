@@ -8,14 +8,20 @@
       <span class="menu__icon">
         <svg-icon-sprite
           [src]="'assets/sprites/sprite.svg#'+item.icon"
-          style="color: #3f51b5"
+          [width]="'15px'"
+          class="menu__svg"
         ></svg-icon-sprite>
       </span>
 
       {{ item.title }}
 
       <span class="menu__arrow" *ngIf="item.children">
-        <img src="/assets/icons/arrow-down.svg">
+        <svg-icon-sprite
+          [src]="'assets/sprites/sprite.svg#arrow-down'"
+          [viewBox]="'0 0 30 30'"
+          style="color: #ffffff"
+        ></svg-icon-sprite>
+<!--        <img src="/assets/icons/arrow-down.svg">-->
       </span>
     </div>
 
@@ -24,3 +30,18 @@
     </ng-container>
   </li>
 </ul>
+
+<!--<mat-nav-list>-->
+<!--  <mat-list-item *ngFor="let item of menu">-->
+<!--    <a matLine>{{ item.title }}</a>-->
+<!--    <svg-icon-sprite-->
+<!--      [src]="'assets/sprites/sprite.svg#arrow-down'"-->
+<!--      [width]="'20px'"-->
+<!--      [viewBox]="'0 0 30 30'"-->
+<!--      style="color: #ffffff"-->
+<!--    ></svg-icon-sprite>-->
+<!--&lt;!&ndash;    <ng-container *ngIf="item.children">&ndash;&gt;-->
+<!--&lt;!&ndash;      <app-menu [menu]="item.children"></app-menu>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ng-container>&ndash;&gt;-->
+<!--  </mat-list-item>-->
+<!--</mat-nav-list>-->

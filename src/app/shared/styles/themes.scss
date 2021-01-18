@@ -1,4 +1,23 @@
-@import 'variables';
+$themes: (
+  light: (
+    primary: #607D8B,
+    sidebarBackgroundColor: #354b5f,
+    sidebarBackgroundImage: 'assets/images/bg-sidebar-dark.png',
+    sidebarHoverBackgroundColor: rgba(0, 0, 0, 0.4),
+    backgroundColor: #F5F5F5,
+    primaryTextColor: #212121,
+    secondaryTextColor: #ffffff
+  ),
+  dark: (
+    primary: #e91e63,
+    sidebarBackgroundColor: #354b5f,
+    sidebarBackgroundImage: #354b5f,
+    sidebarHoverBackgroundColor: rgba(0, 0, 0, 0.4),
+    backgroundColor: #303030,
+    primaryTextColor: #ffffff,
+    secondaryTextColor: #ffffff
+  ),
+);
 
 @mixin themify($themes) {
   @each $theme, $map in $themes {

@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SiteLayoutComponent implements OnInit {
 
+  isShowSidebar = true;
   menu = [
     {
       title: 'item 1', children: [
@@ -37,6 +38,10 @@ export class SiteLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggleSidebar(e): void {
+    this.isShowSidebar = !this.isShowSidebar;
   }
 
 }

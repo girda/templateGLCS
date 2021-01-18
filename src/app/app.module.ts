@@ -25,6 +25,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {ProfileComponent} from './shared/layouts/site-layout/profile/profile.component';
 import {IconSpriteModule} from 'ng-svg-icon-sprite';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatExpansionModule,
     IconSpriteModule,
-    MatMenuModule
+    MatMenuModule,
+    MatRippleModule
   ],
   providers: [
     {

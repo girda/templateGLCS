@@ -1,14 +1,11 @@
-<header class="header">
+<header class="header"[ngClass]="{'hide-sidebar': !isShowSidebar}">
   <div class="header__in">
-    <div class="header__logo">LOGO</div>
-
-
-    <div class="header__user-block">
+        <div class="header__user-block">
 
       <form>
-        <mat-form-field>
+        <mat-form-field class="search">
           <mat-label>Search</mat-label>
-          <input matInput placeholder="Search" type="search">
+          <input matInput type="search">
         </mat-form-field>
       </form>
 
@@ -17,6 +14,27 @@
   </div>
 </header>
 
-<div class="sidebar">
-  <app-menu [menu]="menu"></app-menu>
+<div class="sidebar"
+     [ngClass]="{hide: !isShowSidebar}"
+
+>
+
+  <div class="sidebar__header">
+    <div class="logo">LOGO</div>
+    <button class="sidebar__btn"
+            [ngClass]="{active: isShowSidebar}"
+            (click)="toggleSidebar($event)"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#arrow-down'"
+        [viewBox]="'0 0 30 30'"
+        style="color: #354b5f"
+      ></svg-icon-sprite>
+    </button>
+  </div>
+
+  <div class="sidebar__menu">
+    <app-menu [menu]="menu"></app-menu>
+  </div>
+
 </div>
